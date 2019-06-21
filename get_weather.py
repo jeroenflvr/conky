@@ -12,7 +12,7 @@ from calendar import timegm
 import os
 
 sentinel_file = "sentinel_file"
-openweathermap_api_key = '4c972b1ae53fd6c982664615b3d69f8d'
+openweathermap_api_key = '<YOUR API KEY>'
 sentinel_valid_time = 3600
 
 #https://gist.github.com/RobertSudwarts/acf8df23a16afdb5837f
@@ -22,7 +22,6 @@ def degrees_to_cardinal(d):
     '''
     dirs = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE",
             "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"]
-    #ix = int((d + 11.25)/22.5)
     ix = int((d + 11.25)/22.5 - 0.02)
     return dirs[ix % 16]
 
